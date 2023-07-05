@@ -4,11 +4,12 @@
     {
         static void Main(string[] args)
         {
-
+            // prompt user
             Console.WriteLine("Please enter a number between 5 and 15");
             string userInput = Console.ReadLine();
             int user = 0;
 
+            // try to parse user input for integer value
             try
             {
                 user = int.Parse(userInput);
@@ -32,7 +33,7 @@
             int[] myArray = new int[user]; // new array size of user input
             for (int i = 0; i < myArray.Length; i++)
             {
-                myArray[i] = random.Next(10, 51);
+                myArray[i] = random.Next(10, 51); // generate values from 10 all the way to 51, but not including 51
             }
             Console.WriteLine("The elements of the array are: ");
             foreach (var i in myArray)
@@ -42,6 +43,7 @@
             method2(myArray);
         }
 
+        // method to sum the array elements
         public static void method2(int[] array)
         {
             int sum = 0;
